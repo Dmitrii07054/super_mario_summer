@@ -16,6 +16,7 @@ void ConsoleUIFactory::clear_data() {
 	moneys.clear();
 }
 
+
 void ConsoleUIFactory::create_box(
 	const Coord& top_left, const int width, const int height
 ) {
