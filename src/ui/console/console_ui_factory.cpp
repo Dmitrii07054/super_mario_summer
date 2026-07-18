@@ -14,6 +14,7 @@ void ConsoleUIFactory::clear_data() {
 	ships.clear();
 	enemies.clear();
 	moneys.clear();
+	flying_enemies_.clear();
 }
 
 
@@ -96,4 +97,17 @@ biv::GameMap* ConsoleUIFactory::get_game_map(const int height, const int width) 
 
 biv::Mario* ConsoleUIFactory::get_mario() {
 	return mario;
+}
+
+
+biv::FlyingEnemy* ConsoleUIFactory::create_flying_enemy(
+    const Coord& top_left, const int width, const int height, float hspeed) {
+    
+    FlyingEnemy* enemy = new FlyingEnemy(top_left, width, height, hspeed);
+    flying_enemies_.push_back(enemy);
+    game->add_map_movable(enemy);
+    game->add_movable(enemy);
+    game->add_collisionable(enemy);
+    game_map->add_obj(enemy);
+    return enemy;
 }
