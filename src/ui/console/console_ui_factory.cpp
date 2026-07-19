@@ -15,6 +15,7 @@ void ConsoleUIFactory::clear_data() {
 	enemies.clear();
 	moneys.clear();
 	flying_enemies_.clear();
+	jumping_enemies_.clear();
 }
 
 
@@ -105,6 +106,18 @@ biv::FlyingEnemy* ConsoleUIFactory::create_flying_enemy(
     
     FlyingEnemy* enemy = new FlyingEnemy(top_left, width, height, hspeed);
     flying_enemies_.push_back(enemy);
+    game->add_map_movable(enemy);
+    game->add_movable(enemy);
+    game->add_collisionable(enemy);
+    game_map->add_obj(enemy);
+    return enemy;
+}
+
+biv::JumpingEnemy* ConsoleUIFactory::create_jumping_enemy(
+    const Coord& top_left, const int width, const int height, int jump_interval) {
+
+    JumpingEnemy* enemy = new JumpingEnemy(top_left, width, height, jump_interval);
+    jumping_enemies_.push_back(enemy);
     game->add_map_movable(enemy);
     game->add_movable(enemy);
     game->add_collisionable(enemy);

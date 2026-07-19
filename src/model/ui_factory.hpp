@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include "jumping_enemy.hpp"
 #include "flying_enemy.hpp"
 #include "game.hpp"
 #include "game_map.hpp"
@@ -33,7 +34,11 @@ namespace biv {
 			virtual void create_ship(
 				const Coord& top_left, const int width, const int height) = 0;
 			virtual GameMap* get_game_map(const int height, const int width) = 0;
+			
 			virtual Mario* get_mario() = 0;
+			
 			virtual FlyingEnemy* create_flying_enemy(const Coord& top_left, const int width, const int height, float hspeed) = 0;
+			
+			virtual JumpingEnemy* create_jumping_enemy(const Coord& top_left, const int width, const int height, int jump_interval) = 0;
 	};
 }

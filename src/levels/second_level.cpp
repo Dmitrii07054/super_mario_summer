@@ -37,6 +37,9 @@ void SecondLevel::init_data() {
     ui_factory->create_flying_enemy({85, 15}, 3, 2, 0.15f);
     ui_factory->create_flying_enemy({130, 10}, 3, 2, 0.12f);
     
+	ui_factory->create_jumping_enemy({23, 25}, 3, 2, 30);
+    ui_factory->create_jumping_enemy({83, 25}, 3, 2, 25);
+	
     ui_factory->create_enemy({65, 20}, 3, 2);
     ui_factory->create_enemy({95, 25}, 3, 2);
     ui_factory->create_enemy({155, 25}, 3, 2);
