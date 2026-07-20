@@ -10,6 +10,7 @@
 #include "ui_factory.hpp"
 #include "flying_enemy.hpp"
 #include "jumping_enemy.hpp"
+#include "moving_platform.hpp"
 
 namespace biv {
 	class ConsoleUIFactory : public UIFactory {
@@ -23,6 +24,7 @@ namespace biv {
 			std::vector<ConsoleMoney*> moneys;
 			std::vector<FlyingEnemy*> flying_enemies_;
 			std::vector<JumpingEnemy*> jumping_enemies_;
+			std::vector<MovingPlatform*> moving_platforms_;
 
 		public:
 			ConsoleUIFactory(Game* game);
@@ -50,5 +52,6 @@ namespace biv {
 			Mario* get_mario() override;
 			FlyingEnemy* create_flying_enemy(const Coord& top_left, int width, int height, float hspeed) override;
 			JumpingEnemy* create_jumping_enemy(const Coord& top_left, int width, int height, int jump_interval) override;
+			MovingPlatform* create_moving_platform(const Coord& pos, int w, int h, float hspeed, float left_bound, float right_bound) override;
 	};
 }

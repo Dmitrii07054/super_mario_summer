@@ -33,6 +33,11 @@ void SecondLevel::init_data() {
     ui_factory->create_ship({150, 25}, 40, 2);
     ui_factory->create_ship({210, 20}, 10, 7);
     
+	ui_factory->create_moving_platform({170, 20}, 8, 2, 0.15f, 160, 200);
+	ui_factory->create_moving_platform({170, 25}, 6, 2, 0.2f, 180, 220);
+	ui_factory->create_moving_platform({230, 10}, 8, 2, 0.15f, 220, 260);
+	ui_factory->create_moving_platform({100, 25}, 10, 2, 0.2f, 90, 130);
+	
     ui_factory->create_flying_enemy({45, 12}, 3, 2, 0.1f);
     ui_factory->create_flying_enemy({85, 15}, 3, 2, 0.15f);
     ui_factory->create_flying_enemy({130, 10}, 3, 2, 0.12f);

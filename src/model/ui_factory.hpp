@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include "moving_platform.hpp"
 #include "jumping_enemy.hpp"
 #include "flying_enemy.hpp"
 #include "game.hpp"
@@ -40,5 +41,7 @@ namespace biv {
 			virtual FlyingEnemy* create_flying_enemy(const Coord& top_left, const int width, const int height, float hspeed) = 0;
 			
 			virtual JumpingEnemy* create_jumping_enemy(const Coord& top_left, const int width, const int height, int jump_interval) = 0;
+			
+			virtual MovingPlatform* create_moving_platform(const Coord& top_left, const int width, const int height, float hspeed, float left_bound, float right_bound) = 0;
 	};
 }

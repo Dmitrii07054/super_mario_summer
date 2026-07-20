@@ -24,6 +24,8 @@ void ThirdLevel::init_data() {
     ui_factory->create_ship({70, 16}, 10, 2);
     ui_factory->create_ship({90, 13}, 12, 2);
     ui_factory->create_ship({110, 10}, 15, 2);
+	
+	ui_factory->create_moving_platform({100, 25}, 10, 2, 0.2f, 90, 130);
     
     ui_factory->create_ship({140, 25}, 20, 2);
     
@@ -40,3 +42,5 @@ void ThirdLevel::init_data() {
     ui_factory->create_full_box({80, 7}, 5, 3);
     ui_factory->create_box({100, 4}, 5, 3);
 }
+
+	

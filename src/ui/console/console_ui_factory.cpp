@@ -16,6 +16,7 @@ void ConsoleUIFactory::clear_data() {
 	moneys.clear();
 	flying_enemies_.clear();
 	jumping_enemies_.clear();
+	moving_platforms_.clear();
 }
 
 
@@ -123,4 +124,18 @@ biv::JumpingEnemy* ConsoleUIFactory::create_jumping_enemy(
     game->add_collisionable(enemy);
     game_map->add_obj(enemy);
     return enemy;
+}
+
+biv::MovingPlatform* ConsoleUIFactory::create_moving_platform(
+    const Coord& top_left, const int width, const int height,
+    float hspeed, float left_bound, float right_bound) {
+
+    MovingPlatform* platform = new MovingPlatform(top_left, width, height,
+                                                  hspeed, left_bound, right_bound);
+    moving_platforms_.push_back(platform);
+    game->add_map_movable(platform);
+    game->add_static_obj(platform);
+    game_map->add_obj(platform);
+	game->add_movable(platform);
+    return platform;
 }

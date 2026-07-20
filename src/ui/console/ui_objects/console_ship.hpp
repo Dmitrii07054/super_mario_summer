@@ -4,7 +4,7 @@
 #include "ship.hpp"
 
 namespace biv {
-	class ConsoleShip : public Ship, public ConsoleUIObjectRectAdapter {
+	class ConsoleShip : public Ship, virtual public Movable, public ConsoleUIObjectRectAdapter {
 		public:
 			ConsoleShip(const Coord& top_left, const int width, const int height);
 			
