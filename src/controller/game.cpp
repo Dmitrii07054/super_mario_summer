@@ -2,6 +2,8 @@
 
 #include <algorithm>
 
+#include <iostream>
+
 using biv::Game;
 
 Game::Game() {}
@@ -91,6 +93,10 @@ bool Game::is_level_end() const noexcept {
 }
 
 void Game::move_map_left() noexcept {
+	std::cout << "=== map_movable_objs size: " << map_movable_objs.size() << " ===" << std::endl;
+    for (MapMovable* obj : map_movable_objs) {
+        std::cout << "  Object in map_movable_objs" << std::endl;
+    }
 	for (MapMovable* obj: map_movable_objs) {
 		obj->move_map_left();
 	}

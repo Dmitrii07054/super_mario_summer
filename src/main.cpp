@@ -99,6 +99,10 @@ int main() {
 		game.move_objs_horizontally();
 		game.check_horizontally_static_collisions();
 		
+		for (auto* platform : ui_factory->get_moving_platforms()) {
+			platform->move_horizontally();
+		}
+		
 		game.move_objs_vertically();
 		game.check_mario_collision();
 		game.check_vertically_static_collisions();

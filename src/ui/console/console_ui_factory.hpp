@@ -48,10 +48,13 @@ namespace biv {
 			void create_ship(
 				const Coord& top_left, const int width, const int height
 			) override;
+			
 			GameMap* get_game_map(const int height, const int width) override;
 			Mario* get_mario() override;
 			FlyingEnemy* create_flying_enemy(const Coord& top_left, int width, int height, float hspeed) override;
 			JumpingEnemy* create_jumping_enemy(const Coord& top_left, int width, int height, int jump_interval) override;
 			MovingPlatform* create_moving_platform(const Coord& pos, int w, int h, float hspeed, float left_bound, float right_bound) override;
+			
+			std::vector<MovingPlatform*>& get_moving_platforms() { return moving_platforms_; }
 	};
 }
