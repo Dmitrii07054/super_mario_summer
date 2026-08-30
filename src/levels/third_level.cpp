@@ -15,32 +15,39 @@ biv::GameLevel* ThirdLevel::get_next() {
 }
 
 void ThirdLevel::init_data() {
-    ui_factory->create_mario({5, 20}, 3, 3);
+    ui_factory->create_mario({39, 10}, 3, 3);
     
-    ui_factory->create_ship({0, 25}, 20, 2);
+    ui_factory->create_ship({20, 25}, 40, 2);
+    ui_factory->create_ship({60, 20}, 10, 7);
+    ui_factory->create_ship({80, 25}, 20, 2);
+    ui_factory->create_ship({120, 20}, 10, 7);
+    ui_factory->create_ship({150, 25}, 40, 2);
+    ui_factory->create_ship({210, 20}, 10, 7);
     
-    ui_factory->create_ship({30, 22}, 15, 2);
-    ui_factory->create_ship({50, 19}, 12, 2);
-    ui_factory->create_ship({70, 16}, 10, 2);
-    ui_factory->create_ship({90, 13}, 12, 2);
-    ui_factory->create_ship({110, 10}, 15, 2);
+    ui_factory->create_moving_platform({170, 20}, 8, 2, 0.15f, 160, 200);
+    ui_factory->create_moving_platform({170, 25}, 6, 2, 0.2f, 180, 220);
+    
+    
+    ui_factory->create_flying_enemy({45, 12}, 3, 2, 0.1f);
+    ui_factory->create_flying_enemy({85, 15}, 3, 2, 0.15f);
+    ui_factory->create_flying_enemy({130, 10}, 3, 2, 0.12f);
+    ui_factory->create_flying_enemy({190, 10}, 3, 2, 0.15f);
+    ui_factory->create_flying_enemy({250, 8}, 3, 2, 0.2f);
+    
+    ui_factory->create_jumping_enemy({23, 23}, 3, 2, 30);
+    ui_factory->create_jumping_enemy({83, 23}, 3, 2, 25);
+    ui_factory->create_jumping_enemy({153, 23}, 3, 2, 20);
+    ui_factory->create_jumping_enemy({185, 23}, 3, 2, 15); 
+    
+    ui_factory->create_enemy({65, 18}, 3, 2);
+    ui_factory->create_enemy({95, 23}, 3, 2);
+    ui_factory->create_enemy({155, 23}, 3, 2);
+    ui_factory->create_enemy({215, 18}, 3, 2);
+    
+    ui_factory->create_full_box({40, 15}, 5, 3);
+    ui_factory->create_box({100, 10}, 5, 3);
+    ui_factory->create_full_box({180, 15}, 5, 3);
+    ui_factory->create_full_box({220, 13}, 5, 3);
 	
-	ui_factory->create_moving_platform({100, 25}, 10, 2, 0.2f, 90, 130);
-    
-    ui_factory->create_ship({140, 25}, 20, 2);
-    
-    ui_factory->create_flying_enemy({35, 15}, 3, 2, 0.1f);
-    ui_factory->create_flying_enemy({55, 10}, 3, 2, 0.15f);
-    ui_factory->create_flying_enemy({75, 8}, 3, 2, 0.2f);
-    ui_factory->create_flying_enemy({95, 6}, 3, 2, 0.12f);
-    
-    ui_factory->create_enemy({33, 22}, 3, 2);
-    ui_factory->create_enemy({55, 19}, 3, 2);
-    ui_factory->create_enemy({95, 13}, 3, 2);
-    
-    ui_factory->create_box({60, 10}, 5, 3);
-    ui_factory->create_full_box({80, 7}, 5, 3);
-    ui_factory->create_box({100, 4}, 5, 3);
+	ui_factory->create_moving_platform({230, 10}, 8, 2, 0.15f, 220, 260);
 }
-
-	

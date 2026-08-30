@@ -2,6 +2,8 @@
 
 #include <algorithm>
 
+#include <iostream>
+
 using biv::Game;
 
 Game::Game() {}

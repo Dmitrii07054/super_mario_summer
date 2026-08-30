@@ -7,5 +7,6 @@ namespace biv {
     public:
         FlyingEnemy(const Coord& top_left, int width, int height, float hspeed);
         void move_vertically() noexcept override;
+		void process_mario_collision(Collisionable* mario) noexcept override;
     };
 }

@@ -16,9 +16,6 @@ biv::GameLevel* FirstLevel::get_next() {
 	return next;
 }
 
-// ----------------------------------------------------------------------------
-// 									PROTECTED
-// ----------------------------------------------------------------------------
 void FirstLevel::init_data() {
 	ui_factory->create_mario({39, 10}, 3, 3);
 	
@@ -27,7 +24,7 @@ void FirstLevel::init_data() {
 	ui_factory->create_full_box({30, 15}, 5, 3);
 	ui_factory->create_full_box({50, 15}, 5, 3);
 	
-	ui_factory->create_ship({60, 20}, 40, 7);
+	ui_factory->create_ship({60, 20}, 40, 2);
 	
 	ui_factory->create_box({60, 10}, 10, 3);
 	ui_factory->create_full_box({70, 10}, 5, 3);
@@ -41,11 +38,11 @@ void FirstLevel::init_data() {
 	ui_factory->create_ship({210, 20}, 15, 7);
 	
 	ui_factory->create_enemy({20, 5}, 3, 2);
-	ui_factory->create_enemy({25, 5}, 3, 2);
+	
 	ui_factory->create_enemy({70, 15}, 3, 2);
 	ui_factory->create_enemy({80, 5}, 3, 2);
-	ui_factory->create_enemy({125, 5}, 3, 2);
+	ui_factory->create_enemy({120, 18}, 3, 2);
 	ui_factory->create_enemy({160, 5}, 3, 2);
 	
-	ui_factory->create_flying_enemy({20, 8}, 3, 2, 0.1f);
+	ui_factory->create_flying_enemy({20, 4}, 3, 2, 0.1f);
 }
