@@ -15,6 +15,5 @@ namespace biv {
 			
 		void move_vertically() noexcept override;
 		void move_horizontally() noexcept override;
-		void process_mario_collision(Collisionable* mario) noexcept override;
 	};
 }

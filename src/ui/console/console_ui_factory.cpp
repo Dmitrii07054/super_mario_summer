@@ -133,9 +133,9 @@ biv::MovingPlatform* ConsoleUIFactory::create_moving_platform(
     MovingPlatform* platform = new MovingPlatform(top_left, width, height,
                                                   hspeed, left_bound, right_bound);
     moving_platforms_.push_back(platform);
-    
-    game->add_static_obj(platform);   // ← Марио может стоять
-    game_map->add_obj(platform);      // ← отображается
-    
+    game->add_map_movable(platform);
+    game->add_static_obj(platform);
+    game_map->add_obj(platform);
+	game->add_movable(platform);
     return platform;
 }
