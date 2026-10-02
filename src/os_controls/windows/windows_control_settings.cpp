@@ -2,7 +2,7 @@
 
 #include <windows.h>
 
-using biv::WindowsControlSettings;
+using dim::WindowsControlSettings;
 
 void WindowsControlSettings::init() {
 	void* handle = GetStdHandle(STD_OUTPUT_HANDLE);

@@ -1,7 +1,7 @@
 #include "moving_platform.hpp"
 #include "movable.hpp"
 
-using biv::MovingPlatform;
+using dim::MovingPlatform;
 
 MovingPlatform::MovingPlatform(const Coord& top_left, int width, int height,
                                float hspeed, float left_bound, float right_bound)

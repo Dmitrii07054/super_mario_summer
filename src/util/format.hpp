@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace biv {
+namespace dim {
 	std::string format_string(const std::string& format);
 
 	template<typename T, typename... Args>

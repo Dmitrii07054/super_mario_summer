@@ -4,7 +4,7 @@
 #include "collisionable.hpp"
 #include "ui_factory.hpp"
 
-namespace biv {
+namespace dim {
 	class FullBox : public Box, public Collisionable {
 		protected:
 			UIFactory* ui_factory;

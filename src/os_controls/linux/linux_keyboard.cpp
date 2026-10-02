@@ -2,9 +2,9 @@
 
 #include <ncurses.h>
 
-using biv::LinuxKeyboard;
+using dim::LinuxKeyboard;
 	
-biv::UserInput LinuxKeyboard::get_user_input() {
+dim::UserInput LinuxKeyboard::get_user_input() {
 	int c = getch();
 	
 	switch (c) {

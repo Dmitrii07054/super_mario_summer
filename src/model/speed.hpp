@@ -1,6 +1,6 @@
 #pragma once
 
-namespace biv {
+namespace dim {
 	struct Speed {
 		float v;
 		float h;

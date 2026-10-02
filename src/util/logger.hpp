@@ -13,9 +13,9 @@
 
 #include "format.hpp"
 
-#define LOG_INFO(...) biv::Logger::getInstance().log_info(biv::format_string(__VA_ARGS__))
+#define LOG_INFO(...) dim::Logger::getInstance().log_info(dim::format_string(__VA_ARGS__))
 
-namespace biv {
+namespace dim {
 	class Logger {
 		private:
 			std::ofstream log_file;

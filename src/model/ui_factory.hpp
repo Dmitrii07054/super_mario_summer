@@ -12,7 +12,7 @@
 #include "game_map.hpp"
 #include "mario.hpp"
 
-namespace biv {
+namespace dim {
 	class UIFactory {
 		protected:
 			Game* game = nullptr;

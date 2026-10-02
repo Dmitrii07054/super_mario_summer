@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-using biv::Game;
+using dim::Game;
 
 Game::Game() {}
 

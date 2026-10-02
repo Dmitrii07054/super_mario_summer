@@ -1,6 +1,6 @@
 #include "movable.hpp"
 
-using biv::Movable;
+using dim::Movable;
 
 Movable::Movable(
 	const Coord& top_left, 

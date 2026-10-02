@@ -12,7 +12,7 @@
 #include "jumping_enemy.hpp"
 #include "moving_platform.hpp"
 
-namespace biv {
+namespace dim {
 	class ConsoleUIFactory : public UIFactory {
 		private:
 			ConsoleGameMap* game_map = nullptr;

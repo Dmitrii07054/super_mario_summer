@@ -7,7 +7,7 @@
 #include "collisionable.hpp"
 #include "console_ui_obj_rect_adapter.hpp"
 
-namespace biv {
+namespace dim {
     class JumpingEnemy : public RectMapMovableAdapter,
                          public Movable,
                          public Collisionable,

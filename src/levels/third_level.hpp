@@ -2,7 +2,7 @@
 
 #include "game_level.hpp"
 
-namespace biv {
+namespace dim {
     class ThirdLevel : public GameLevel {
 		public:
 			ThirdLevel(UIFactory* ui_factory);

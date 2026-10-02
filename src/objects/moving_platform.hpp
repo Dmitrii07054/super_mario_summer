@@ -2,7 +2,7 @@
 
 #include "console_ship.hpp"
 
-namespace biv {
+namespace dim {
     class MovingPlatform : public ConsoleShip {
     private:
         float left_bound_;

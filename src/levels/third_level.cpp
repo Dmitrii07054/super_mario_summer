@@ -1,6 +1,6 @@
 #include "third_level.hpp"
 
-using biv::ThirdLevel;
+using dim::ThirdLevel;
 
 ThirdLevel::ThirdLevel(UIFactory* ui_factory) : GameLevel(ui_factory) {
     init_data();
@@ -10,7 +10,7 @@ bool ThirdLevel::is_final() const noexcept {
     return true;
 }
 
-biv::GameLevel* ThirdLevel::get_next() {
+dim::GameLevel* ThirdLevel::get_next() {
     return nullptr;
 }
 

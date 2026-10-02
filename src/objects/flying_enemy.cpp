@@ -2,8 +2,8 @@
 #include "mario.hpp"
 #include "map_movable.hpp"
 
-using namespace biv;
-using biv::FlyingEnemy;
+using namespace dim;
+using dim::FlyingEnemy;
 
 FlyingEnemy::FlyingEnemy(const Coord& top_left, int width, int height, float hspeed)
     : RectMapMovableAdapter(top_left, width, height) {

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace biv {
+namespace dim {
 	class MapMovable {
 		public: 
 			static const int MAP_STEP = 1;

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace biv {
+namespace dim {
 	struct Coord {
 		float x;
 		float y;

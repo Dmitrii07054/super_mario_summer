@@ -2,8 +2,8 @@
 #include "mario.hpp"
 #include "map_movable.hpp"
 
-using namespace biv;
-using biv::JumpingEnemy;
+using namespace dim;
+using dim::JumpingEnemy;
 
 JumpingEnemy::JumpingEnemy(const Coord& top_left, int width, int height, int jump_interval)
     : RectMapMovableAdapter(top_left, width, height)

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace biv {
+namespace dim {
 	enum class UserInput {
 		EXIT,
 		MAP_LEFT,

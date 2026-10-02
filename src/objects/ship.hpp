@@ -3,7 +3,7 @@
 #include "rect_map_movable_adapter.hpp"
 #include "movable.hpp"
 
-namespace biv {
+namespace dim {
 	class Ship : public RectMapMovableAdapter, virtual public Movable {
 		public:
 			Ship(

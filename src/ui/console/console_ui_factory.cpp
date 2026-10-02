@@ -1,6 +1,6 @@
 #include "console_ui_factory.hpp"
 
-using biv::ConsoleUIFactory;
+using dim::ConsoleUIFactory;
 
 ConsoleUIFactory::ConsoleUIFactory(Game* game) : UIFactory(game) {}
 
@@ -90,19 +90,19 @@ void ConsoleUIFactory::create_ship(
 	game_map->add_obj(ship);
 }
 
-biv::GameMap* ConsoleUIFactory::get_game_map(const int height, const int width) {
+dim::GameMap* ConsoleUIFactory::get_game_map(const int height, const int width) {
 	if (game_map == nullptr) {
 		game_map = new ConsoleGameMap(height, width);
 	}
 	return game_map;
 }
 
-biv::Mario* ConsoleUIFactory::get_mario() {
+dim::Mario* ConsoleUIFactory::get_mario() {
 	return mario;
 }
 
 
-biv::FlyingEnemy* ConsoleUIFactory::create_flying_enemy(
+dim::FlyingEnemy* ConsoleUIFactory::create_flying_enemy(
     const Coord& top_left, const int width, const int height, float hspeed) {
     
     FlyingEnemy* enemy = new FlyingEnemy(top_left, width, height, hspeed);
@@ -114,7 +114,7 @@ biv::FlyingEnemy* ConsoleUIFactory::create_flying_enemy(
     return enemy;
 }
 
-biv::JumpingEnemy* ConsoleUIFactory::create_jumping_enemy(
+dim::JumpingEnemy* ConsoleUIFactory::create_jumping_enemy(
     const Coord& top_left, const int width, const int height, int jump_interval) {
 
     JumpingEnemy* enemy = new JumpingEnemy(top_left, width, height, jump_interval);
@@ -126,7 +126,7 @@ biv::JumpingEnemy* ConsoleUIFactory::create_jumping_enemy(
     return enemy;
 }
 
-biv::MovingPlatform* ConsoleUIFactory::create_moving_platform(
+dim::MovingPlatform* ConsoleUIFactory::create_moving_platform(
     const Coord& top_left, const int width, const int height,
     float hspeed, float left_bound, float right_bound) {
 
